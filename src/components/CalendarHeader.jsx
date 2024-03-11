@@ -23,7 +23,7 @@ const CalendarHeader = () => {
   };
 
   return (
-    <header className="px-4 py-2 fixed bg-white top-0 z-30 md:relative w-full flex items-center">
+    <header className="px-4 py-2 fixed bg-white top-0 z-30 w-full flex items-center border">
       <h1 className="md:mr-10 md:text-xl text-sm mr-5 text-gray-500 font-semibold">
         Note Taking App
       </h1>

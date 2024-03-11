@@ -31,7 +31,7 @@ const App = () => {
   return (
     <React.Fragment>
       {showEventModal && <EventModal />}
-      <div className="h-screen flex flex-col">
+      <div className="h-screen flex flex-col overflow-x-hidden">
         <CalendarHeader />
         <div className="flex flex-1">
           <Sidebar />
