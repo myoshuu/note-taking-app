@@ -30,21 +30,12 @@ const App = () => {
 
   return (
     <React.Fragment>
-      {width < 1440 && (
-        <div className="fixed top-0 left-0 w-full h-full bg-white z-10">
-          <h3 className="border flex items-center justify-center w-[100vw] h-[100vh] text-center">
-            Im sorry, this app not available at phone or tablet
-          </h3>
-        </div>
-      )}
-      <div className={width < 1440 ? "overflow-hidden" : ""}>
-        {showEventModal && <EventModal />}
-        <div className="h-screen flex flex-col">
-          <CalendarHeader />
-          <div className="flex flex-1">
-            <Sidebar />
-            <Month month={currentMonth} />
-          </div>
+      {showEventModal && <EventModal />}
+      <div className="h-screen flex flex-col">
+        <CalendarHeader />
+        <div className="flex flex-1">
+          <Sidebar />
+          <Month month={currentMonth} />
         </div>
       </div>
     </React.Fragment>

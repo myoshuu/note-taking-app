@@ -4,6 +4,7 @@ import GlobalContext from "../context/GlobalContext";
 
 const Day = ({ day, rowIdx }) => {
   const [dayEvent, setDayEvent] = useState([]);
+  const [width, setWidth] = useState(window.innerWidth);
   const { setDaySelected, setShowEventModal, savedEvent, setSelectedEvent } =
     useContext(GlobalContext);
 
@@ -13,6 +14,18 @@ const Day = ({ day, rowIdx }) => {
     );
     setDayEvent(event);
   }, [savedEvent, day]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const getCurrentDay = () => {
     return day.format("DD-MM-YY") === dayjs().format("DD-MM-YY")
@@ -51,9 +64,14 @@ const Day = ({ day, rowIdx }) => {
   };
 
   return (
-    <div className="border border-gray-200 flex flex-col">
+    <div className="border border-gray-200 flex flex-col sm:min-h-40">
       <header className="flex flex-col items-center">
         {rowIdx === 0 && (
+          <p className="text-sm mt-1 sm:hidden md:block">
+            {day.format("ddd").toUpperCase()}
+          </p>
+        )}
+        {width < 768 && (
           <p className="text-sm mt-1">{day.format("ddd").toUpperCase()}</p>
         )}
         <p className={`text-sm p-1 my-1 text-center ${getCurrentDay()}`}>
