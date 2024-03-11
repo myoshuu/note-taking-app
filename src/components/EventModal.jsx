@@ -60,7 +60,7 @@ const EventModal = () => {
     <div className="h-screen w-full fixed left-0 top-0 flex justify-center items-center rounded-lg z-[999]">
       <form
         action=""
-        className="bg-white rounded-lg shadow-2xl sm:w-10/12 md:w-1/3"
+        className="bg-white rounded-lg shadow-2xl w-10/12 md:w-1/3"
       >
         <header className="bg-gray-100 px-8 py-2 flex justify-between items-center">
           <div></div>
@@ -95,7 +95,7 @@ const EventModal = () => {
               {daySelected.format("dddd, MMMM DD")}
             </p>
             <RichTextEditor
-              className="sm:max-h-[300px] md:max-h-[400px] overflow-auto"
+              className="max-h-[300px] md:max-h-[400px] overflow-auto"
               editor={editor}
             >
               <RichTextEditor.Toolbar sticky stickyOffset={0}>

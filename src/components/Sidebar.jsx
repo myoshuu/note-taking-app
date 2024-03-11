@@ -3,7 +3,7 @@ import SmallCalendar from "./SmallCalendar";
 
 const Sidebar = () => {
   return (
-    <aside className="border p-5 w-64 sm:hidden xl:block">
+    <aside className="border p-5 w-64 hidden xl:block">
       <CreateEventButton />
       <SmallCalendar />
     </aside>

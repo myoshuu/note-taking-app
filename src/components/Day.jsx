@@ -64,10 +64,10 @@ const Day = ({ day, rowIdx }) => {
   };
 
   return (
-    <div className="border border-gray-200 flex flex-col sm:min-h-40">
+    <div className="border border-gray-200 flex flex-col min-h-40">
       <header className="flex flex-col items-center">
         {rowIdx === 0 && (
-          <p className="text-sm mt-1 sm:hidden md:block">
+          <p className="text-sm mt-1 hidden md:block">
             {day.format("ddd").toUpperCase()}
           </p>
         )}

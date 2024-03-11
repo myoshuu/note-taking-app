@@ -4,7 +4,7 @@ import Day from "./Day";
 
 const Month = ({ month }) => {
   return (
-    <div className="flex-1 grid md:grid-cols-7 md:grid-rows-5 sm:mt-20 md:mt-0 sm:grid-cols-3 sm:grid-rows-12">
+    <div className="flex-1 grid md:grid-cols-7 md:grid-rows-5 mt-20 md:mt-0 grid-cols-3 grid-rows-12">
       {month.map((row, i) => (
         <React.Fragment key={i}>
           {row.map((day, idx) => (

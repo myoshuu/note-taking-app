@@ -23,13 +23,13 @@ const CalendarHeader = () => {
   };
 
   return (
-    <header className="px-4 py-2 sm:fixed sm:bg-white sm:top-0 sm:z-30 md:relative w-full flex items-center">
-      <h1 className="md:mr-10 md:text-xl sm:text-sm sm:mr-5 text-gray-500 font-semibold">
+    <header className="px-4 py-2 fixed bg-white top-0 z-30 md:relative w-full flex items-center">
+      <h1 className="md:mr-10 md:text-xl text-sm mr-5 text-gray-500 font-semibold">
         Note Taking App
       </h1>
       <button
         onClick={resetMonth}
-        className="border rounded md:py-2 md:px-4 mr-5 sm:py-1 sm:px-2"
+        className="border rounded md:py-2 md:px-4 mr-5 py-1 px-2"
       >
         Today
       </button>
@@ -41,7 +41,7 @@ const CalendarHeader = () => {
           <CaretRight />
         </button>
       </div>
-      <h2 className="ml-10 md:text-xl sm:text-lg text-gray-500 font-bold">
+      <h2 className="ml-10 md:text-xl text-lg text-gray-500 font-bold">
         {dayjs(new Date(dayjs().year(), monthIndex)).format("MMMM YYYY")}
       </h2>
     </header>
